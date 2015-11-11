@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs</title>
+    <!-- jQuery UI style sheet -->
+    <link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css">
+    <!-- normal style sheet used for layout and general formatting -->
+	<link rel="stylesheet" href="css/main.css">
+    <!-- jQuery library -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- jQuery UI library -->
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <!-- jQuery call to the tabs() method. -->
+    <script>
+		$(document).ready(function() {
+			$("#tabs").tabs();
+		});
+	</script>
+</head>
+	
+<body>
+	<main>
+		<h1></h1>
+        <!-- Tabs HTML code. -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Book description</a></li>
+                <li><a href="#tabs-2">Instructor Bios</a></li>
+                <li><a href="#tabs-3">Who this book is for</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>With this book, you can teach yourself how to design web pages the way the 
+                professionals do, by using HTML and CSS in tandem to structure and format the 
+                page content. It begins with a crash course that teaches you more about HTML 
+                and CSS than you can learn from most full books. That includes a chapter on 
+                Responsive Web Design that shows you how to build responsive websites that will 
+                look and work right on all devices, from phones to tablets to desktop computers.</p>
+                <p>After that, this book shows you how to enhance your web pages with features 
+                like images, forms with built-in data validation, and audio and video clips. 
+                You'll also learn how to use JavaScript and jQuery to add features like image 
+                rollovers, image swaps, and slide shows. You'll learn how to use jQuery UI and 
+                jQuery plugins to add features like accordions, tabs, carousels, and slide shows. 
+                And you'll learn how to use jQuery Mobile to develop separate websites for mobile 
+                devices.</p>
+            </div>
+            <div id="tabs-2">
+         
+				<p><strong>Instructor: Zak Ruvalcaba</strong> </p>
+				<p>
+				Zak Ruvalcaba has been researching, designing, and developing for the web since 1995. 
+				He holds a Bachelor's Degree from San Diego State University and a Master of Science in 
+				Instructional Technology from National University in San Diego. He served as Creative Director 
+				with EPIC Solutions until 1998. His expertise in developing Web applications led him to a 
+				position as Manager of Web Development at SkyDesk, Inc., where he developed Web applications 
+				for such companies as Gateway, HP, Toshiba, IBM, Intuit, Peachtree, Dell, Covad Communications,
+				and Microsoft. He's worked for such companies as Wireless Knowledge (a Microsoft / Qualcomm company) 
+				as a wireless software engineer developing web solutions for companies including Mellon Financial,
+				Goldman Saks, TV Guide, Healthbanks, The Gartner Group, Microsoft, Qualcomm, and Commerce One. 
+				His skill set includes technologies and languages from HTML/XHTML, XML/XSLT/XPATH/XQUERY, JavaScript,
+				CSS, ASP, ASP.NET, VB, C#, ADO.NET, Web Services, SQL, T-SQL, Flash, ActionScript, and ColdFusion.   </p>
+
+				<p> Aside from teaching and holding design lectures on various technologies and tools including HTML, 
+				Dreamweaver, Flash, ASP.NET, ADO.NET, and Web Services for the San Diego Community College District,
+				 Palomar College, and Mt. San Jacinto College, Zak Ruvalcaba is the author of the 10 Minute Guide to 
+				 Dreamweaver 4 on Que Publishing, Build Your Own ASP.NET Website using C# and VB on SitePoint Press, 
+				 Dreamweaver CS4 Unleashed on Sams Publishing, and Beginning Expression Web on Wrox Press.   </p>
+
+				<p> Zak is a Microsoft Certified Application Developer for .NET (MCAD) and a Microsoft Certified Solutions Developer
+          		 for .NET (MCSD). He has also written numerous online articles involving Web development, specifically 
+          		 ASP.NET technologies for Sitepoint.com as well as a featured cover story in ASP.NET Pro Magazine's March 2005 issue.    </p>
+           		
+           
+            </div>
+            <div id="tabs-3">
+                <p>This book is for anyone who wants to develop web pages at a thoroughly professional 
+                level. That includes:</p>
+				<ul>
+					<li>budding web developers</li> 
+					<li>web developers who haven't yet updated their websites to HTML5 and CSS3</li>
+					<li>web developers who need to expand and enhance their skillsets</li>
+				</ul>
+            </div>
+        </div>
+        <!-- End Tabs HTML code. -->
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height:650;   
+    width: 909px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+	
+}
+h1, h2, ul, p {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	padding-bottom: .25em;
+	color: blue;
+}
+h2 {
+	font-size: 120%;
+	padding: .5em 0;
+}
+img {
+	height: 603px;
+	width: 908px;
+}
+#slides img {
+	display: none;
+}
+

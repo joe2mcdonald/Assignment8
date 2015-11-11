@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment8  jQuery Events - Joe McDonald - OCTOBER 2015 </title>
+	<meta name="description" content="CONTACT US">
+	<meta name="author" content="JOSEPH MCDONALD">
+	
+	
+	  
+  <!-- CSS    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+  <!-- 
+   <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+   -->
+   <link rel="stylesheet" href="css/email_list.css">
+   
+ <!--    ============   HTML5 SHIV CONDITIONAL COMMENT    ============     -->    
+<!--[if lt IE 9]>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->   			
+
+		
+ <!-- -----------------    LIBRARIES ---------------  --> 
+   
+ <!-- CDN FOR JQUERY LIBRARIES - NOT USING 
+    <!--  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>	 --> 
+    
+ <!-- JQUERY LIBRARIES LOADED    --> 
+ <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="js/jquery.validate.min.js"></script>
+   
+
+ <!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  -->
+ <!--	<script src="js/jquery.mobilemenu.js">  </script>  -->
+
+ <!-- <script  sc="scripts/jquery-2.1.4.min.js" >  	</script>       -->             
+ <!-- <script  sc="scripts/jquery-2.1.4.min.map" >  	</script>   -->
+		
+<!--      ============     JAVASCRIPT SHEET        =======================    --> 
+ <!--  <script src="js/script.js"></script>		-->
+ 	<script src="js/email_list.js"></script> 
+
+							
+ <script>
+	 
+	 
+$(document).ready(function(){
+//			$('#responsive-menu').mobileMenu();
+
+	 
+// -----------------  jQuery EVENTS STEP 1  CLICK  --------------- 	 
+$("#myButton11").click(function(event) {
+    alert("Button 1 Clicked");
+});	
+	 
+// -----------------  jQuery EVENTS STEP 2  BIND CLICK ---------------  	 
+$("#myButton12").bind("click", function(event) {
+    alert("Button 2 Clicked");
+});	 			
+			
+	 
+// -----------------  jQuery EVENTS STEP 3  ON ---------------  	 
+$("#myButton13").on("click", function(event) {
+    alert("Button 3 Clicked");
+});	 			
+	
+	 
+// -----------------  jQuery EVENTS STEP 4 TWO BUTTONS ---------------  	 
+$("#myButton14, #myButton15").on("click", function(event) {
+    alert("Button 4 or 5 Clicked");
+});	 			
+	
+	
+// -----------------  jQuery EVENTS STEP 5  CLICK MOUSEENTER MOUSELEAVE ---------------  	
+$("#myDiv1").on({
+click: function() {alert("You clicked on the button 7");},	
+mouseenter: function() {alert("Hovered over the div!");},
+mouseleave: function() {alert("The mouse left the div!");}
+}).css({"background-color": "aquamarine", "border": "solid red 1px", "height": "400px", "width": "400px"});
+	
+	
+// -----------------  jQuery EVENTS STEP 6 SPAN THREE MESSAGES ---------------  	
+$("#myDiv2").on({
+	click: function() {$("span").text( "you clicked on the button 8").css({"color": "purple", "font-weight": "bold"});},
+	mouseenter: function() {$("span").text("Mouse Hovered over the div!").css({"color": "purple", "font-weight": "bold"});},
+    mouseleave: function() {$("span").text("The mouse left the div!").css({"color": "purple", "font-weight": "bold"});}
+  }).css({"background-color": "#7fe6ff", "border": "solid green 1px", "height": "100px", "width": "100px"});			
+			
+			
+<!--      ============   STEP 7  GOOGLE REDIRECT PREVENTDEFAULT    -->
+	
+/*																								   
+$("a").on({
+	#redirect.addEventListener("click", function(event) { 
+		alert("You have clicked on the Google link but not redirected  6 ");	
+   		  event.preventDefault();
+			});	
+	});	
+*/	
+																								   
+$("#redirect").on({
+	
+	click: function(event) {$(event.preventDefault()).css({"color": "#53c953", "font-weight": "bold"});}
+			});	
+	
+/*	
+css({"color": "green", "font-weight": "bold"}) ;},	
+
+*/	
+<!--      ============   STEP 8 	RESIZE WIDTH HEIGHT  -->
+	
+	
+$(window).resize(function() {	
+$(".myDiv3" ).text( "The width for the window is " + $(window).width() + "px." +  "  The height for the window is " +  $(window).height() + "px." );	
+});
+	
+	
+<!--      ============   STEP 9  	TEXT BOX FOCUS  -->	
+
+//$("#textbox1").focusin().css({"background-color": "#d3cece"});	
+
+//$("#textbox1").focusout().css({"background-color": "#ffffff"});	
+
+//$("#textbox1").on(
+
+//fousin: function() {css({"background-color": "#d3cece"});
+//});	
+	
+/*	
+var i = 0;	
+$("input").focusin(function(){
+	("#textbox1").css({"background-color": "#d3cece"});
+   
+});
+	
+*/	
+//fousout: function() {alert("The mouse left the div!").css({"color": "green", "font-weight": "bold"});},
+	
+/*
+
+$( "div" ).focusin(function() {
+  $( this ).find( "span" ).css({ "display", "inline", "color": "green"} ).fadeOut( 1000 );
+});	
+	
+$( "input" ).focusin(function() {
+  $( this ).find( "span" ).css( "display" , "inline" ,"background-color": "red" ).fadeOut( 1000 );
+});	
+	   alert("Button 4 or 5 Clicked");
+	*/
+	
+	
+<!--      ============   STEP 10  	FORM TAG VALIDATION     -->		
+	
+	
+
+
+	
+			
+});               // end of ready 
+	 
+	 
+</script>	
+<style> 
+	
+	#myDiv  { color: aquamarine; border: solid red 1px; height: 400px; width: 400px; }	
+	
+</style>																					
+																												
+																						
+</head>
+
+<body>
+
+<main> 
+	<br>
+	<br>
+	<br>
+	
+	<center>
+	<p><strong>             FEWD II - ASSIGNMENT  8 -  JOE MCDONALD  NOVEMBER 12 2015	                  </strong></p>
+		<br>
+	<p><strong>   																			   	 </strong></p>
+	<p> <strong>                      															      </strong></p>  
+	    
+<p> <strong> 	--------------------------------------------------------------------------------               </strong></p>
+ 
+ <p> <strong> 	
+ <br>                              
+ <br>                                                               
+ <br>       --------------------------------------------------------------------------------       	
+      	 
+</strong></p>		
+     </center>
+
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton11">Click Me 1 </button>
+<br>																						
+<br>
+<br>	
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton12">Click Me 2 </button>
+<br>					
+<br>
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton13">Click Me 3 </button>
+<br>				
+<br>
+
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton14">Click Me 4 </button>
+<br>		
+<br>
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton15">Click Me 5 </button>
+<br>				
+<br>
+
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<button id="myButton16">Click Me 6 </button>
+<br>					
+<br>
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<div id="myDiv1" > 
+<button id="myButton17">Click Me 7 </button>
+</div>
+<br>					
+<br>
+<br>		
+<br>
+<!--      ============                      ==          --> 
+<div id="myDiv2" > 
+<button id="myButton18">Click Me 8 </button>
+</div>					
+<br>
+<span id="myDiv2Span" >      </span>
+<br>					
+<br>
+<br>		
+<br>
+<!--      ============   STEP 7  GOOGLE REDIRECT PREVENTDEFAULT    -->															
+ <a href="http://www.Google.com" id="redirect">  Visit Google 6 </a>
+
+<br>		
+<br>
+<br>		
+<br>
+<!--      ============    STEP 8  RESIZE DISPLAY WIDTH AND HEIGHT    --> 
+<div class="myDiv3" > 
+ Resize viewport to see the window width & height
+</div>					
+<br>
+<br>					
+<br>
+<br>
+
+<!--      ============    STEP 9 TEXT BOX     --> 
+<input type="text" name="textbox" id="textbox1"  placeholder="Enter message here" >
+<!--   $("#textbox1").focus();  --> 
+<br>					
+<br>
+<br>
+<br>
+
+<!--      ============    STEP 10  VALIDATE EMAIL & NAME    --> 
+
+<form id="email_form_id" class="email_form_class" name="email_form" action="join.html" method="get"> 
+
+<!-- <form id="email_form" class="email_form_class" name="email_form" action="#" method="">   -->
+
+	<p><label for="full_name">Full Name:</label> 
+	 <input type="text" name="full_name" id="full_name_id"  placeholder="Enter name here  " class="full_name_input" >
+	 <label class="error">&nbsp;</label</p>
+	
+	
+	<p><label for="email_address">Email Address:</label>  
+	<input type="email" name="email_address_name" id="email_address" placeholder="Enter email here " >
+	<label class="error">&nbsp;</label></p> 
+
+	
+	<p><label>&nbsp;</label> 
+	<input type="submit"  id="join_id" value="PLEASE CLICK">
+	<label>&nbsp;</label> </p>
+
+</form>
+
+
+<br>					
+<br>
+<br>
+<br>
+
+	
+</main>
+ 
+  <aside>
+  
+  </aside>
+	
+	
+  <footer style="display:none">
+      Copyright by Joe McDonald
+    </footer>	
+	
+</body>
+</html>

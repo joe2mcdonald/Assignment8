@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 650px;
+    padding: 0 2em 1em;
+    border: 3px solid blue;
+}
+h1 {
+	color: blue;
+}
+label {
+	float: left;
+    width: 11em;
+    text-align:left;
+}
+input {
+    width: 12em;
+    margin-left: 1em;
+    margin-bottom: .5em;
+/*	float: left;  */
+}
+span {
+	color: red;
+}
+#join_id, #reset {
+	width: 8.5em;
+	float: left;
+}
+
+
+label.error {
+	float: none;
+	color: red;
+	font-size: 87.5%;
+	margin-left: .5em;
+}
+

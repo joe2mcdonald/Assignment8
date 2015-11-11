@@ -1,0 +1,347 @@
+
+
+ /*
+
+
+
+
+
+label.full_name_error {
+	float: none;
+
+
+	font-weight: bolder;  
+  color: red;   
+	
+ /*
+	
+	font-size: 87.5%;
+	margin-left: .2em;
+	width: 20em;
+	border: 1px solid red;   
+	*/
+}
+*/
+  /*
+input.full_name  {
+	float: none;
+	font-size: 87.5%;
+	margin-left: .5em;
+	 border: 5px solid red; 
+	border-color: crimson;
+	background-color: aquamarine;
+}  
+
+ */
+ /*
+label.email_address_error {
+	float: none;
+/*	color: red; */
+	font-size: 87.5%;
+	margin-left: .5em;
+/*	border: 3px solid red; */ 
+	width: 20em;
+}
+
+
+
+input.email_address_error {
+	float: none;
+/*	color: red;  */
+	font-size: 87.5%;
+	margin-left: .5em;
+	border: 1px solid red;
+}
+	*/            
+	/*
+"#join_id" {
+	float:none;
+}
+	*/
+	
+	
+	
+/*	color: red;  */
+
+
+	 
+	$(".email_form_class").validate({
+	 
+	debug: true   //  Prevents the form from submitting and tries to help setting up the 
+		              // validation with warnings about missing methods and other debug messages.
+	});
+	
+	
+	
+$(".email_form_class" ).validate({
+  highlight: function(element, errorClass, validClass) {
+    $(element).addClass(errorClass).removeClass(validClass);
+    $(element.form).find("label[for=" + element.id + "]")
+      .addClass(errorClass);
+  },
+  unhighlight: function(element, errorClass, validClass) {
+    $(element).removeClass(errorClass).addClass(validClass);
+    $(element.form).find("label[for=" + element.id + "]")
+      .removeClass(errorClass);
+  }
+});
+
+
+<!--   name="submit_name"   Please enter a full address.  Please enter a valid email address. -->
+
+<!--	<label class="email_address_error">&nbsp;</label></p> -->
+<!-- 	 <label class="full_name_error">&nbsp;</label</p>  -->1
+
+
+
+
+
+
+
+<!--      ============    MULTI LINE COMMENT ==      2  -->  
+<!--
+  
+<button id="myButton2" onclick="myFunction()">Click Me 2 </button>	
+
+<br>																																	
+<br>
+<br>	
+ 	-->  			
+																	
+<!--      ============    MULTI LINE COMMENT ==  	3	-->
+
+<button id="myButton3">Click Me 3 </button>
+
+<script>
+					                                   // USER DEFINED FUNCTION
+myButton3.addEventListener("click", writeMessage3, false);
+function writeMessage3() {	
+	alert("I have been clicked 3 a");
+}
+
+					                                    // CALL BACK FUNCTION 
+myButton3.addEventListener("click", function() {alert("I have been clicked 3 b"); }, false);												
+</script>																								
+
+<br>																																	
+<br>
+<br>																																																																											
+																																									
+<!--      ============    MULTI LINE COMMENT ==  	3									
+																										
+<script>
+	document.addEventListener("DOMContentLoaded", init, false);
+	
+	function init() {
+		myButton.addEventListener("click", writeMessage3, false);
+	}
+	function writeMessage3() {
+		alert("I have been clicked 3 b");
+			
+	}
+</script>
+<input id="myButton" type="button" value="Click Me 3 ">																								
+
+<br>																																	
+<br>
+<br>																																			>
+																						
+-->
+	
+
+																												
+<!--      ============    MULTI LINE COMMENT ==    4 	// CALL BACK FUNCTION 								
+--> 																																			
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {							   
+		myButton4.addEventListener("click", function(){alert("I have been clicked 4");}, false);
+	}												 // CALL BACK FUNCTION 
+	
+</script>
+<input id="myButton4" type="button" value="Click Me 4 ">																								
+
+<br>																																	
+<br>
+<br>																																																																								
+																				
+																	
+<!--      ============    MULTI LINE COMMENT ==  	5	//  ALLOWS YOU TO WRITE IN <HEAD> -->								
+
+												
+<script>
+	document.addEventListener("DOMContentLoaded", init, false); //ALLOWS YOU TO WRITE IN <HEAD> 
+	
+	function init() {
+		myButton.addEventListener("click", writeMessage5, false);
+	}
+	function writeMessage5() {
+		alert("I have been clicked 5");
+	}
+</script>
+
+<input id="myButton" type="button" value="Click Me 5 ">																								
+
+<br>																																	
+<br>
+<br>																																																											
+																										
+																		
+<!--      ============    MULTI LINE COMMENT ==  6  GOOGLE REDIRECT PREVENTDEFAULT    -->									<!--	
+					
+ <a href="http://www.Google.com" id="redirect">  Visit Google 6 </a>
+<script>																								   
+	redirect.addEventListener("click", function(event) { 
+		alert("You have clicked on the Google link but not redirected  6 ");	
+   		  event.preventDefault();
+			});
+		
+</script>		
+	 --> 																						   																									   																									     																																		
+
+<br>	
+<br>
+<br>	
+																		
+<!--      ============    MULTI LINE COMMENT ==    7   BUTTON  TEXTBOX 										
+--> 
+<input type="text" name="textbox" id="textbox7"  placeholder="Enter message here" >
+	<br>
+ <input id="myButton7" type="button" value="Click Me 7 ">	
+																				
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+		var box = document.getElementById("textbox7");
+		myButton7.addEventListener("click", writeMessage7, false); // CALL BACK FUNCTION 
+		function writeMessage7() {
+		    alert(box.value);
+	        var btnPlay = document.getElementById("myButton7");
+            btnPlay.disabled = true;
+		    }	
+      }
+		
+</script>							
+		
+<br>																																	
+<br>
+<br>																																																																													
+														
+																		
+<!--      ============    MULTI LINE COMMENT ==  8 A  BUTTON NEWPAGE										
+--> 
+	
+<input id="myButton8" type="button" value="Click Me 8 A ">
+	
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+		myButton8.addEventListener("click", newPagePop8, false); // CALL BACK FUNCTION 
+		function newPagePop8() {
+		    alert("new page pop up ");
+		    window.open('newpage.html','gg','width=300,height=300,resizable=yes');
+
+		    }	
+      }
+		
+</script>										
+<br>																																	
+<br>
+<br>					
+					
+<!--      ============    MULTI LINE COMMENT ==  9  START STOP BUTTONS	--> 
+
+<input id="myButton9A" type="button" value="START 9 A ">
+<input id="myButton9B" type="button" value="STOP 9 B ">	
+<script>
+	window.addEventListener("load", init, false);      //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+	
+	    myButton9A.addEventListener("click", setInter, false); 
+		var id;
+		function setInter() {
+		   id = setInterval(function() {alert("LEARNING JAVAsCRIPT IS FUN! ");}, 2000);
+		}
+		
+	    myButton9B.addEventListener("click", stopInterval, false);
+		function stopInterval() {
+		   clearInterval(id);
+		   alert(" STOPPED LOGGING THE TEXT");
+		}
+	   }
+	
+</script>										
+<br>																																	
+<br>
+<br>			
+		
+		
+<!--      ============    MULTI LINE COMMENT ==  10  DROP DOWN LIST	--> 
+
+
+
+
+<label>Choose a pet from this list:</label>
+ <select id="pets" size="4">
+  <option value="cat">Cat</option>
+  <option value="dog">Dog</option>
+  <option value="goldfish">Goldfish</option>
+  <option value="turtle">Turtle</option>
+</select> 
+
+<p>Click the button to show selected item in alert box.						
+<input id="myButton10" type="button" value="SELECT 10"></p>	
+
+  <script>
+    window.addEventListener("load", init, false);                 //  ALLOWS YOU TO WRITE IN <HEAD> 
+	function init() {
+	    var pet = document.getElementById("pets");
+		myButton10.addEventListener("click", writeMessage10, false); // CALL BACK FUNCTION 
+		function writeMessage10() {
+		    alert(pet.value);
+		    }	
+      }	
+		
+	  
+	-->    
+	  
+	  
+	  
+  </script>  
+																															
+<br>
+<br>					
+<br>
+<br><br>
+<br><br>
+<br><br>
+<br>																																																																							<label>Choose a pet from this list:
+<input list="pets" name="myPet" id="petlist"/></label>			
+
+
+
+ /*
+$("#myDiv3").text($(window).width(), (window).height());
+
+
+
+ */
+
+	<center>
+	
+	
+<p> <strong> 	--------------------------------------------------------------------------------               </strong></p>
+ 	
+	<p><strong>             FEWD II - ASSIGNMENT  8 -  JOE MCDONALD  NOVEMBER 2015	                  </strong></p>
+	    
+<p> <strong> 	--------------------------------------------------------------------------------               </strong></p>
+<p> <strong> 	--------------------------------------------------------------------------------               </strong></p>
+  
+		
+ </center>
+
+
+
+
+
+
