@@ -6,8 +6,6 @@
 	<meta name="description" content="CONTACT US">
 	<meta name="author" content="JOSEPH MCDONALD">
 	
-	
-	  
   <!-- CSS    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
  
   <!-- 
@@ -20,7 +18,6 @@
 <!--[if lt IE 9]>
    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 <![endif]-->   			
-
 		
  <!-- -----------------    LIBRARIES ---------------  --> 
    
@@ -28,250 +25,202 @@
     <!--  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>	 --> 
     
  <!-- JQUERY LIBRARIES LOADED    --> 
- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
- <script src="js/jquery.validate.min.js"></script>
-   
+<!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
 
  <!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  -->
  <!--	<script src="js/jquery.mobilemenu.js">  </script>  -->
 
- <!-- <script  sc="scripts/jquery-2.1.4.min.js" >  	</script>       -->             
- <!-- <script  sc="scripts/jquery-2.1.4.min.map" >  	</script>   -->
-		
+<script  src="js/jquery-2.1.4.min.js" >  	</script>                   
+ <!-- <script  src="scripts/jquery-2.1.4.min.map" >  	</script>   -->  <!-- FOR DEBUGGING              -->
+  <script src="js/jquery.validate.min.js"></script>                     <!--  JQUERY EMAIL VALIDATE       -->
+ 
 <!--      ============     JAVASCRIPT SHEET        =======================    --> 
  <!--  <script src="js/script.js"></script>		-->
- 	<script src="js/email_list.js"></script> 
-
+  	<script src="js/email_list.js"></script> 
+ <!-- 	<script src="js/email-script.js"></script>   -->
 							
  <script>
-	 
-	 
+
 $(document).ready(function(){
 //			$('#responsive-menu').mobileMenu();
 
 	 
 // -----------------  jQuery EVENTS STEP 1  CLICK  --------------- 	 
-$("#myButton11").click(function(event) {
-    alert("Button 1 Clicked");
+$("#myButtonStep1").click(function(event) {
+    alert("Button STEP 1 click");
 });	
 	 
 // -----------------  jQuery EVENTS STEP 2  BIND CLICK ---------------  	 
-$("#myButton12").bind("click", function(event) {
-    alert("Button 2 Clicked");
+$("#myButtonStep2").bind("click", function(event) {
+    alert("Button STEP 2 bind");
 });	 			
 			
 	 
 // -----------------  jQuery EVENTS STEP 3  ON ---------------  	 
-$("#myButton13").on("click", function(event) {
-    alert("Button 3 Clicked");
+$("#myButtonStep3").on("click", function(event) {
+    alert("Button STEP 3 on");
 });	 			
 	
 	 
 // -----------------  jQuery EVENTS STEP 4 TWO BUTTONS ---------------  	 
-$("#myButton14, #myButton15").on("click", function(event) {
-    alert("Button 4 or 5 Clicked");
+$("#myButtonStep4a, #myButtonStep4b").on("click", function(event) {
+    alert("Button STEP 4 or STEP 5 on");
 });	 			
 	
 	
-// -----------------  jQuery EVENTS STEP 5  CLICK MOUSEENTER MOUSELEAVE ---------------  	
+// -----------------  jQuery EVENTS STEP 5 CLICK MOUSEENTER MOUSELEAVE ---------------  	
 $("#myDiv1").on({
-click: function() {alert("You clicked on the button 7");},	
-mouseenter: function() {alert("Hovered over the div!");},
-mouseleave: function() {alert("The mouse left the div!");}
-}).css({"background-color": "aquamarine", "border": "solid red 1px", "height": "400px", "width": "400px"});
+click: function() {alert("STEP 5 click - You clicked on the Div  "); $("#myDiv1").text( "STEP 5 - you clicked on the Div ").css({ "background-color": "#e0ffcf",  "font-weight": "bold", "font-size" : "x-large" , "padding": "40px 0 0 20px",  });} ,	
+mouseenter: function() {alert("STEP 5 mouseenter - Hovered over the div! "); $("#myDiv1").text( "STEP 5 mouseenter - Hovered over the div! ").css({ "background-color": "#f4bfe5", "font-weight": "bold", "font-size" : "xx-large" , "padding": "4em 0 0 20px",  }); }  ,
 	
+mouseleave: function() {alert("STEP 5 mouseleave - The mouse left the div!");  $("#myDiv1").text( "STEP 5 mouseleave - The mouse left the div! ").css({ "background-color": "#d9d994", "font-weight": "bold", "font-size" : "xx-large" , "padding": "8em 0 0 20px",  }); }
 	
+}).css({"background-color": "aquamarine", "border": "solid red 1px", "height": "400px", "width": "400px"});   
+	
+
 // -----------------  jQuery EVENTS STEP 6 SPAN THREE MESSAGES ---------------  	
 $("#myDiv2").on({
-	click: function() {$("span").text( "you clicked on the button 8").css({"color": "purple", "font-weight": "bold"});},
-	mouseenter: function() {$("span").text("Mouse Hovered over the div!").css({"color": "purple", "font-weight": "bold"});},
-    mouseleave: function() {$("span").text("The mouse left the div!").css({"color": "purple", "font-weight": "bold"});}
-  }).css({"background-color": "#7fe6ff", "border": "solid green 1px", "height": "100px", "width": "100px"});			
-			
-			
+	click: function() { $("#myDiv2").css({ "background-color": "#e0ffcf",  "color": "#0cc6f4" });
+					   $("#myDiv2Span").text( "STEP 6 - Clicked on the Div " ).css({  "font-weight":
+					"bolder", "font-size": "x-large" , "padding": "40px 0px 0px 20px"  , "color": "purple" }); },
+	mouseenter: function() {  
+		$("#myDiv2").css({ "background-color": "rgba(234, 178, 232, 0.44)",  "color": "#0c4af4" });
+		$("#myDiv2Span").text("STEP 6 - Mouse Hovered over the div!").css({ "font-weight": "bold"}); 
+	},
+    mouseleave: function() { $("#myDiv2").css({ "background-color": "rgba(242, 186, 39, 0.72)",  "color": "#f40ce2" });
+		$("#myDiv2Span").text("STEP 6 - Mouse left the div!").css({"font-weight": "bold"});    }
+  }).css({"background-color": "#7fe6ff",  "color": "#f40cbe", "border": "solid green 1px", "height": "100px", "width": "400px"});	
+
+
 <!--      ============   STEP 7  GOOGLE REDIRECT PREVENTDEFAULT    -->
 	
-/*																								   
-$("a").on({
-	#redirect.addEventListener("click", function(event) { 
-		alert("You have clicked on the Google link but not redirected  6 ");	
-   		  event.preventDefault();
-			});	
-	});	
-*/	
-																								   
 $("#redirect").on({
+	click: function(event) { 
+	event.preventDefault();
+	if (event.isDefaultPrevented())
+		{
+			alert("Was preventDefault() called = " + event.isDefaultPrevented() + " \nGoogle Redirect Prevented - " + "\nDefault event.type = " + event.type +  "\nName of node that triggered the event = " + event.target.nodeName  ) ;
+			  $("#redirect").css({   "color": "red" , "font-weight": "bold", "font-size" : "xx-large"   });
+		} 
+	else
+		{  
+			alert("Was preventDefault() called = " + event.isDefaultPrevented() + " \nGoogle Redirect will occur - " + "\nDefault event.type = " + event.type + " will happen - " + "\nName of node that triggered the event = " + event.target.nodeName ) ;
+               $("#redirect").css({   "color": "blue" , "font-weight": "bold", "font-size" : "xx-large"   });
+     	}
+	  }
+	});	
 	
-	click: function(event) {$(event.preventDefault()).css({"color": "#53c953", "font-weight": "bold"});}
-			});	
 	
-/*	
-css({"color": "green", "font-weight": "bold"}) ;},	
-
-*/	
 <!--      ============   STEP 8 	RESIZE WIDTH HEIGHT  -->
-	
-	
+
 $(window).resize(function() {	
-$(".myDiv3" ).text( "The width for the window is " + $(window).width() + "px." +  "  The height for the window is " +  $(window).height() + "px." );	
+$(".myDiv3" ).text( "STEP 8 - The width for the window is " + $(window).width() + "px." + "  aaaaa The height for the window is " +  $(window).height() + "px." );	
+$(".myDiv3" ).text( "STEP 8 - The width for the window is " + $(window).width() + "px." + " bb The height for the window is " +  $(window).height() + "px." );	
+	
 });
 	
+<!--      ============   STEP 9  	TEXT FIELD FOCUS  -->	
+
+	$("#textbox1").focusin(function() { $("#textbox1").css("background-color", "#d3cece") });
+	$("#textbox1").focusout(function() { $("#textbox1").css("background-color", "#ffffff") });
 	
-<!--      ============   STEP 9  	TEXT BOX FOCUS  -->	
-
-//$("#textbox1").focusin().css({"background-color": "#d3cece"});	
-
-//$("#textbox1").focusout().css({"background-color": "#ffffff"});	
-
-//$("#textbox1").on(
-
-//fousin: function() {css({"background-color": "#d3cece"});
-//});	
+<!--      ============   STEP 10  	FORM TAG EMAIL VALIDATION     -->		
 	
-/*	
-var i = 0;	
-$("input").focusin(function(){
-	("#textbox1").css({"background-color": "#d3cece"});
-   
 });
-	
-*/	
-//fousout: function() {alert("The mouse left the div!").css({"color": "green", "font-weight": "bold"});},
-	
-/*
-
-$( "div" ).focusin(function() {
-  $( this ).find( "span" ).css({ "display", "inline", "color": "green"} ).fadeOut( 1000 );
-});	
-	
-$( "input" ).focusin(function() {
-  $( this ).find( "span" ).css( "display" , "inline" ,"background-color": "red" ).fadeOut( 1000 );
-});	
-	   alert("Button 4 or 5 Clicked");
-	*/
-	
-	
-<!--      ============   STEP 10  	FORM TAG VALIDATION     -->		
-	
-	
-
-
-	
-			
-});               // end of ready 
-	 
 	 
 </script>	
-<style> 
-	
-	#myDiv  { color: aquamarine; border: solid red 1px; height: 400px; width: 400px; }	
-	
-</style>																					
-																												
-																						
+<!--	================================================================================================       -->
+
+																				
 </head>
 
 <body>
 
 <main> 
 	<br>
-	<br>
-	<br>
 	
 	<center>
 	<p><strong>             FEWD II - ASSIGNMENT  8 -  JOE MCDONALD  NOVEMBER 12 2015	                  </strong></p>
 		<br>
 	<p><strong>   																			   	 </strong></p>
-	<p> <strong>                      															      </strong></p>  
-	    
+	   
 <p> <strong> 	--------------------------------------------------------------------------------               </strong></p>
- 
- <p> <strong> 	
- <br>                              
- <br>                                                               
- <br>       --------------------------------------------------------------------------------       	
-      	 
+ <p> <strong> 	                                                          
+     --------------------------------------------------------------------------------       	  	 
 </strong></p>		
      </center>
 
 <br>		
 <br>
-<!--      ============                      ==          --> 
-<button id="myButton11">Click Me 1 </button>
+<!--      ============          STEP 1            ==          --> 
+<button id="myButtonStep1">STEP 1 .click  </button>
 <br>																						
 <br>
-<br>	
+
 <br>		
 <br>
-<!--      ============                      ==          --> 
-<button id="myButton12">Click Me 2 </button>
+<!--      ============              STEP 2        ==          --> 
+<button id="myButtonStep2">STEP 2 .bind  </button>
 <br>					
 <br>
 <br>		
 <br>
-<!--      ============                      ==          --> 
-<button id="myButton13">Click Me 3 </button>
+<!--      ============              STEP 3        ==          --> 
+<button id="myButtonStep3">STEP 3 .on  </button>
 <br>				
 <br>
 
 <br>		
 <br>
-<!--      ============                      ==          --> 
-<button id="myButton14">Click Me 4 </button>
-<br>		
-<br>
-<br>		
-<br>
-<!--      ============                      ==          --> 
-<button id="myButton15">Click Me 5 </button>
+<!--      ============        STEP 4     TWO BUTTONS        ==          --> 
+  <p>  
+<button id="myButtonStep4a">STEP 4 A .on  </button> 
+
+<button id="myButtonStep4b">STEP 4 B .on   </button>
+</p>
+
 <br>				
 <br>
+<br>		
+<br>
+<!--      ============          STEP 5             ==          --> 
 
-<br>		
-<br>
-<!--      ============                      ==          --> 
-<button id="myButton16">Click Me 6 </button>
+<div id="myDiv1" >STEP 5 Alert click mouseenter mouseleave</div>
 <br>					
 <br>
 <br>		
 <br>
-<!--      ============                      ==          --> 
-<div id="myDiv1" > 
-<button id="myButton17">Click Me 7 </button>
-</div>
-<br>					
-<br>
-<br>		
-<br>
-<!--      ============                      ==          --> 
-<div id="myDiv2" > 
-<button id="myButton18">Click Me 8 </button>
-</div>					
-<br>
+<!--      ============            STEP 6  SPAN           ==          --> 
+
+<div id="myDiv2"  id="myButton18">STEP 6 SPAN		
+<br> </div>
 <span id="myDiv2Span" >      </span>
 <br>					
 <br>
 <br>		
 <br>
-<!--      ============   STEP 7  GOOGLE REDIRECT PREVENTDEFAULT    -->															
- <a href="http://www.Google.com" id="redirect">  Visit Google 6 </a>
+<!--      ============   STEP 7  GOOGLE REDIRECT PREVENTDEFAULT   -->	
 
+<a href="http://www.Google.com" id="redirect">  STEP 7 Visit Google </a>
 <br>		
 <br>
 <br>		
 <br>
 <!--      ============    STEP 8  RESIZE DISPLAY WIDTH AND HEIGHT    --> 
+
 <div class="myDiv3" > 
- Resize viewport to see the window width & height
+ STEP 8 - Resize viewport to see the window width & height
 </div>					
 <br>
 <br>					
 <br>
 <br>
 
-<!--      ============    STEP 9 TEXT BOX     --> 
-<input type="text" name="textbox" id="textbox1"  placeholder="Enter message here" >
-<!--   $("#textbox1").focus();  --> 
+<!--      ============    STEP 9 FOCUS     --> 
+
+STEP 9 - FOCUS  
+<input type="text" name="textbox" id="textbox1"  placeholder="STEP 9 - Enter message here" >
+
 <br>					
 <br>
 <br>
@@ -279,24 +228,21 @@ $( "input" ).focusin(function() {
 
 <!--      ============    STEP 10  VALIDATE EMAIL & NAME    --> 
 
-<form id="email_form_id" class="email_form_class" name="email_form" action="join.html" method="get"> 
+<form id="email_form_id" class="email_form_class" name="email_form" action="join.html" method="get">   
 
-<!-- <form id="email_form" class="email_form_class" name="email_form" action="#" method="">   -->
+<!--  <form id="email_form" class="email_form_class" name="email_form" action="#" method="">  -->
 
 	<p><label for="full_name">Full Name:</label> 
 	 <input type="text" name="full_name" id="full_name_id"  placeholder="Enter name here  " class="full_name_input" >
-	 <label class="error">&nbsp;</label</p>
-	
+<!-- 	 <label class="error">&nbsp;</label</p>  -->
 	
 	<p><label for="email_address">Email Address:</label>  
 	<input type="email" name="email_address_name" id="email_address" placeholder="Enter email here " >
-	<label class="error">&nbsp;</label></p> 
-
+<!-- 	<label class="error">&nbsp;</label></p>     -->
 	
 	<p><label>&nbsp;</label> 
-	<input type="submit"  id="join_id" value="PLEASE CLICK">
+	<input type="submit"  id="join_id" value="STEP 10 " >
 	<label>&nbsp;</label> </p>
-
 </form>
 
 

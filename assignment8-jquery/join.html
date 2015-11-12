@@ -43,8 +43,8 @@
 	            field_parts = fields[i].split("=");
 	            field_parts[0] = decode( field_parts[0] );
 	            field_parts[1] = decode( field_parts[1] );
-	            document.write("<dt>" + field_parts[0] + "</dt>");
-	            document.write("<dd>" + field_parts[1] + "</dd>");
+	            document.write("<br> <dt>" + field_parts[0] + "</dt>");
+	            document.write("<br><strong><dd>" + field_parts[1] + "</dd></strong><br> <br>");
 	        }
 	        document.write("</dl>");
 	    }
@@ -56,7 +56,7 @@
 <body>
 	<section id="content">
 	    <h1>Thanks for providing your information!</h1>
-	    <p>Your registration has been submitted with the following data:</p>
+	    <p>Your information has been submitted with the following data:</p>
 	    <script type="text/javascript">display_data();</script>
 	</section>
 </body>
