@@ -1,33 +1,72 @@
-<!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Lab 2 - Calculator III</title>
-</head>
+	<head>
+	<title>Assignment8 - Calculator -JOSEPH MCDONALD</title>
+    <meta name="description" content="CONTACT US">
+	<meta name="author" content="JOSEPH MCDONALD">
+	
+	  
+  <!-- =======================   CSS   =================================– -->
+   <!-- normal style sheet used for layout and general formatting -->
+  <!--  <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">          -->
+ <link rel="stylesheet" type="text/css" href="css/calc1.css">
+	     
+  <!-- jQuery UI style sheet -->
+<!-- <link rel="stylesheet" href="jquery-ui.min.css"> -->
+   
+ <!--    ============   HTML5 SHIV CONDITIONAL COMMENT    ============     -->    
+<!--[if lt IE 9]>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
+<![endif]-->   			
+	
+ <!-- =======================    LIBRARIES =======================  --> 
+   
+ <!-- CDN FOR JQUERY LIBRARIES - NOT USING 
+ <!--  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>	 --> 
+    
+ <!--  =======================   JQUERY LIBRARIES LOADED  =======================   --> 
+ <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+ 
+ <!--  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+ <!--  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  -->
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>   --> 
+ <!--  <script src="js/jquery.mobilemenu.js">  </script>  -->
+ <!--  <script  sc="scripts/jquery-2.1.4.min.js" >  	</script>       -->             
+ <!--  <script  sc="scripts/jquery-2.1.4.min.map" >  	</script>         NEED FOR DEBUGGING  -->
+ <script  src="js/jquery-2.1.4.min.js" >  	</script>
+												
+<!--      ============     JAVASCRIPT            =======================    --> 
+<!-- 	<script src="js/script.js"></script>  -->
+ <script src="js/calc.js"> </script>
 
+</head>
 <body>
-	<input type="text" readonly id="result">
-    <br>
-    <div id="container">
-        <input type="button" id="seven" value="7">
-        <input type="button" id="eight" value="8">
-        <input type="button" id="nine" value="9">
-        <input type="button" id="divide" value="/">
-        <br>
-        <input type="button" id="four" value="4">
-        <input type="button" id="five" value="5">
-        <input type="button" id="six" value="6">
-        <input type="button" id="multiply" value="*">
-        <br>
-        <input type="button" id="one" value="1">
-        <input type="button" id="two" value="2">
-        <input type="button" id="three" value="3">
-        <input type="button" id="subtract" value="-">
-        <br>
-        <input type="button" id="zero" value="0">
-        <input type="button" id="period" value=".">
-        <input type="button" id="add" value="+">
-    </div>
-    <input type="button" id="equal" value="=">
+
+<input type="hidden" id="operId" value=""/>
+<div id="div1"  >
+<input type="text" id="resultId" value="" readonly />  
+<br>
+<div id="containerId">
+<input type="button" id="7" value="7" class="number"></input>
+<input type="button" id="8" value="8" class="number"></input>
+<input type="button" id="9" value="9" class="number"></input>
+<input type="button" id="/" value="/" class="symbol"></button><br>
+<input type="button" id="4" value="4" class="number"></input>
+<input type="button" id="5" value="5" class="number"></input>
+<input type="button" id="6" value="6" class="number"></input>
+<input type="button" id="*" value="*" class="symbol"></input><br>
+<input type="button" id="1" value="1" class="number"></input>
+<input type="button" id="2" value="2" class="number"></input>
+<input type="button" id="3" value="3" class="number"></input>
+<input type="button" id="-" value="-" class="symbol"></input><br>
+<input type="button" id="0" value="0" class="number"></input>
+<input type="button" id="periodId" value="." class="number periodCl"></input>
+<input type="button" id="equalsId" value="=" class="equals"></input>
+<input type="button" id="+" value="+" class="symbol"></input>
+</div>
+<input type="button" id="clearId" value="clear" class="clear" ></input><br>
+</div>
+<br>
+
 </body>
 </html>

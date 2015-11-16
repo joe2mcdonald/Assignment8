@@ -1,0 +1,63 @@
+
+#resultId {
+	width: 612px;
+	height: 150px;
+	font-weight: bold;
+	font-size: xx-large;
+	border: 1px solid #fc0000;
+	margin: 2px;
+	padding-left: 10px;
+	box-shadow: 2px 0px #9da853;
+	background: #f1ff92;	
+		}
+
+#clearId  {
+	width: 150px;
+	height: 150px;
+	font-weight: bold;
+	font-size: xx-large;
+}
+
+#div, input {
+	width: 150px;
+	height: 150px;
+	font-weight: bold;
+	font-size: xx-large;
+	margin-bottom: 2px;
+}
+
+#div1 {
+	width: 620px;
+	height: 910px;
+	background-color: #00ff62;
+    padding:10px;
+ 	
+}
+#containerID input.symbol {
+	background: #ffe4e7;
+	margin-right: 4px;
+	box-shadow: 2px 4px #9da853;
+}
+
+#containerID input #+ {
+	box-shadow: 2px 19px #9da853;
+}
+
+#containerID input.equals {
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+}
+
+#containerID  input.periodCl {
+	background: #9fffd3;
+	box-shadow: 0px 4px #9da853;
+	
+}
+
+#div1 input.clear {
+	background: #92eaff;
+	box-shadow: 2px 4px #9da853;
+	
+}
+	
+	
